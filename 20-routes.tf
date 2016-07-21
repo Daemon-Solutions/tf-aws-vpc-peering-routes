@@ -22,6 +22,7 @@ resource "aws_route" "peer_nat_b" {
 }
 
 resource "aws_route" "peer_nat_c" {
+  count                     = "${var.create_third_route}"
   destination_cidr_block    = "${var.destination_cidr}"
   vpc_peering_connection_id = "${var.peer_connection_id}"
   route_table_id            = "${element(split(",", var.nat_route_tables), 2)}"
