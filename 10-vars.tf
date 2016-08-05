@@ -3,6 +3,10 @@ variable "peer_connection_id" {}
 variable "public_route_table" {}
 variable "nat_route_tables"   {}
 
+variable "create_routes" {
+  default = 1
+}
+
 variable "create_third_route" {
   default = 1
 }

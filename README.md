@@ -23,6 +23,7 @@ Variables
  - `peer_connection_id` - Resource ID of the VPC peering connection
  - `public_route_table` - Resource ID of the public routing table in your _local_ VPC
  - `nat_route_tables` - Resource ID of the NAT routing tables in your _local_ VPC
+ - `create_routes` - Hacky binary conditional to state if to create any routes at all. Useful when the vpc peer only exists in one environment
  - `create_third_route` - Hacky binary conditional to create a third route (useful when only two NAT routes exist)
 
 It's generally preferable to re-use the values from the upstream modules used to
